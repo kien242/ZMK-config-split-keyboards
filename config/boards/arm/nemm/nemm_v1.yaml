@@ -1,5 +1,5 @@
-identifier: mytom_v1
-name: Mytom Rev1 Board
+identifier: nemm_v1
+name: Nemm Rev1 Board
 type: mcu
 arch: arm
 toolchain:

@@ -1,9 +1,9 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config BOARD_MYTOM_V1_LEFT
-	bool "mytom v1 left"
+config BOARD_NEMM_V1_LEFT
+	bool "nemm v1 left"
 	depends on SOC_NRF52840_QIAA
-config BOARD_MYTOM_V1_RIGHT 
-    bool "mytom v1 right"
+config BOARD_NEMM_V1_RIGHT 
+    bool "nemm v1 right"
 	depends on SOC_NRF52840_QIAA
