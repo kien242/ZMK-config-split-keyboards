@@ -10,33 +10,22 @@ config ZMK_SPLIT_ROLE_CENTRAL
 	
 if ZMK_DISPLAY
 
-config I2C
+config SPI
 	default y
 
-config SSD1306
+config ST7789V
 	default y
 
-config SSD1306_REVERSE_MODE
-	default y
-
-config LVGL_HOR_RES_MAX
-	default 128
-
-config LVGL_VER_RES_MAX
-	default 64
-
-config LVGL_VDB_SIZE
-	default 64
-
-config LVGL_DPI
-	default 148
-
-config LVGL_BITS_PER_PIXEL
-	default 1
-
-choice LVGL_COLOR_DEPTH
-	default LVGL_COLOR_DEPTH_1
+choice ST7789V_PIXEL_FORMAT
+	default ST7789V_RGB888
 endchoice
+
+config LV_Z_BITS_PER_PIXEL
+	default 24 
+
+#choice LV_COLOR_DEPTH
+#	default LV_COLOR_DEPTH_16 if SHIELD_ST7789V_WAVESHARE_240X240
+#endchoice
 
 endif # ZMK_DISPLAY
 

@@ -59,26 +59,42 @@
 	};
 };
 
-&i2c0 {
+&spi0 {
 	status = "okay";
 
- 	sda-pin = <6>;
-	scl-pin = <40>;
+	sck-pin  = <6>;    /* SCK */
+	mosi-pin = <40>;   /* MOSI */
+	cs-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;  /* CS */
 
-	oled: ssd1306@3c {
-		compatible = "solomon,ssd1306fb";
-		reg = <0x3c>;
-		label = "SSD1306";
-		width = <128>;
-		height = <64>;
-		segment-offset = <0>;
-		page-offset = <0>;
-		display-offset = <0>;
-		multiplex-ratio = <31>;
-		com-invdir;
-		segment-remap;
-		com-sequential;
-		prechargep = <0x22>;
+	st7789v: st7789v@0 {
+		compatible = "sitronix,st7789v";
+		label = "DISPLAY";
+		spi-max-frequency = <20000000>;
+		reg = <0>;
+
+		dc-gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;        /* DC */
+		reset-gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;    /* RESET */
+
+		width = <320>;
+		height = <170>;
+		x-offset = <0>;
+		y-offset = <35>;
+		vcom = <0x2b>;
+		gctrl = <0x35>;
+		vrhs = <0x0f>;
+		vdvs = <0x20>;
+		mdac = <0x60>;
+		gamma = <0x01>;
+		colmod = <0x55>;
+		lcm = <0x2c>;
+		porch-param = [0c 0c 00 33 33];
+		cmd2en-param = [5a 69 02 01];
+		pwctrl1-param = [52 a1];
+		pvgam-param = [D0 00 02 07 0B 1A 31 54 40 29 12 12 12 17];
+		nvgam-param = [D0 00 02 07 05 15 2D 44 44 1C 18 16 1C 1D];
+		ram-param = [00 F8];
+		rgb-param = [CD 08 14];
+
 	};
  };
 
