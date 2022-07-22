@@ -20,6 +20,12 @@ choice ST7789V_PIXEL_FORMAT
 	default ST7789V_RGB888
 endchoice
 
+config LVGL_HOR_RES_MAX
+	default 320
+
+config LVGL_VER_RES_MAX
+	default 170
+
 endif # ZMK_DISPLAY
 
 endif #BOARD_MYTOM_V1_LEFT
