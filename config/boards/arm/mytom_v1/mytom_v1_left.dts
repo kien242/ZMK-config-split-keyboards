@@ -73,7 +73,8 @@
 		spi-max-frequency = <20000000>;
 		reg = <0>;
 
-		dc-gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;        /* DC */
+		cmd-data-gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;
+		/*dc-gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;        /* DC */*/
 		reset-gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;    /* RESET */
 
 		width = <320>;
