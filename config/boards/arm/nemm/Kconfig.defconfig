@@ -1,9 +1,9 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if BOARD_MYTOM_V1_LEFT
+if BOARD_NEMM_V1_LEFT
     config ZMK_KEYBOARD_NAME 
-	default "Mytom Left v1"
+	default "Nemm Left v1"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
@@ -31,18 +31,18 @@ config LVGL_BITS_PER_PIXEL
 
 endif # ZMK_DISPLAY
 
-endif #BOARD_MYTOM_V1_LEFT
+endif #BOARD_NEMM_V1_LEFT
 
-if BOARD_MYTOM_V1_RIGHT
+if BOARD_NEMM_V1_RIGHT
     config ZMK_KEYBOARD_NAME
-	default "Mytom Right v1"
-endif #BOARD_MYTOM_V1_RIGHT
+	default "Nemm Right v1"
+endif #BOARD_NEMM_V1_RIGHT
 
 
-if BOARD_MYTOM_V1_LEFT || BOARD_MYTOM_V1_RIGHT
+if BOARD_NEMM_V1_LEFT || BOARD_NEMM_V1_RIGHT
 
 config BOARD
-	default "Mytom"
+	default "Nemm"
 
 config ZMK_SPLIT
 	default y

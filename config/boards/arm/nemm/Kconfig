@@ -5,4 +5,4 @@ config BOARD_ENABLE_DCDC
 	bool "Enable DCDC mode"
 	select SOC_DCDC_NRF52X
 	default y
-	depends on (BOARD_MYTOM_V1_LEFT || BOARD_MYTOM_V1_RIGHT)
+	depends on (BOARD_NEMM_V1_LEFT || BOARD_NEMM_V1_RIGHT)
