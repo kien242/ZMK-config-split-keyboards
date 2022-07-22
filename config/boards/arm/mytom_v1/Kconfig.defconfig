@@ -26,6 +26,9 @@ config LVGL_HOR_RES_MAX
 config LVGL_VER_RES_MAX
 	default 170
 
+config LVGL_BITS_PER_PIXEL
+	default 24
+
 endif # ZMK_DISPLAY
 
 endif #BOARD_MYTOM_V1_LEFT
