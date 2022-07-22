@@ -64,6 +64,7 @@
 
 	sck-pin  = <6>;    /* SCK */
 	mosi-pin = <40>;   /* MOSI */
+	miso-pin = <14>;   /* MISO */ 
 	cs-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;  /* CS */
 
 	st7789v: st7789v@0 {
@@ -94,7 +95,7 @@
 		nvgam-param = [D0 00 02 07 05 15 2D 44 44 1C 18 16 1C 1D];
 		ram-param = [00 F8];
 		rgb-param = [CD 08 14];
-
+		
 	};
  };
 
