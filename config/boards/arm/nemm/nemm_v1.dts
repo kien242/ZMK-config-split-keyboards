@@ -3,7 +3,7 @@
 *
 * SPDX-License-Identifier: MIT
 */
-
+#include "nemm.dtsi"
 / {
 	model = "NEMM";
 	compatible = "nemm,v1";
