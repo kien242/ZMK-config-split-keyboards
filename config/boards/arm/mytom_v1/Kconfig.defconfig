@@ -20,9 +20,8 @@ choice ST7789V_PIXEL_FORMAT
 	default ST7789V_RGB888
 endchoice
 
-config LVGL_Z_BITS_PER_PIXEL
-	default 24 
-
+config LV_Z_BITS_PER_PIXEL
+	default 1
 
 endif # ZMK_DISPLAY
 
