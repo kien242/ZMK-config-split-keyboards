@@ -54,8 +54,8 @@
 	compatible = "nordic,nrf-spim";
 };
 
-&i2c0 {
- 	compatible = "nordic,nrf-twi";
+&spi0 {
+	compatible = "nordic,nrf-spim";
 };
 
 &usbd {
